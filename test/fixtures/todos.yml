@@ -2,10 +2,10 @@
 
 one:
   description: MyString
-  pomodoro_etimate: 1
+  pomodoro_estimate: 1
   complete: false
 
 two:
   description: MyString
-  pomodoro_etimate: 1
+  pomodoro_estimate: 1
   complete: false
