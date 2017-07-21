@@ -2,23 +2,21 @@
     <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
     Todo List
 </h1>
-      <ul>
+
+<ul class="card">
+    <% @todos.each do |todo| %>
         <li>
             <input type="checkbox">
-            <a href="/">Teach the Students</a>
-            <span  class="pomodoro-estimate">4 pomodoros</span>
+            <a href="show/<%= todo.id %>">
+                <%= todo.description %>
+            </a>
+            <span class="pomodoro-estimate small-pomodoro-estimate">
+                <%= todo.pomodoro_estimate %>
+            </span>
         </li>
-        <li>
-            <input type="checkbox">
-            <a href="show/2">Walk the Students to Lunch</a>
-            <span class="pomodoro-estimate">3 pomodoros</span>
-        </li>
-        <li>
-            <input type="checkbox">
-            <a href="show/3">Make sure the Students have Fun!</a>
-            <span class="pomodoro-estimate">0 pomodoros</span>
-        </li>
-     </ul>
+    <%end%>
+</ul>
+     
      <div id="new-todo-block">
             <input class="text-input" id="new-todo-description" type="text" placeholder="Add a New Todo ..."> 
             <input class="text-input" id="new-todo-description" type="number" placeholder="Pomodoro Estimate ...">
