@@ -33,6 +33,6 @@ class TodoController < ApplicationController
    def destroy
       todo = Todo.find_by_id(params[:id])
       todo.destroy
-      redirect_to "/todo/index"
+      redirect_to "/"
    end
 end

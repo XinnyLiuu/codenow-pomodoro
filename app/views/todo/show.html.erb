@@ -9,6 +9,6 @@
   <h2><%= @todo.description %></h2>
   <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo.pomodoro_estimate %> Pomodoros</span>
   <a href="/todo/edit/<%= @todo.id %>" id="edit-todo-button">Edit</a>
-  <a href="#" id="delete-todo-button">Delete</a>
+  <a href="/todo/destroy/<%= @todo.id %>" id="delete-todo-button">Delete</a>
   <a href="/" class="simple-link">Go back...</a>
 </div>
